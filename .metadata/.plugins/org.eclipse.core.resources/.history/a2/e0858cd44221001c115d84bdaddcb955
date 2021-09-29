@@ -1,0 +1,61 @@
+package com.moglix.moglixproject.repository;
+
+import com.moglix.mogproject.dto.Cart;
+
+public abstract class CartDAOImpl implements CartDAO {
+
+	private static int counter=0;
+	private static CartDAO cartDao;
+	public CartDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	public static CartDAO getinstance()
+	{
+		if (cartDao==null)
+		{
+			cartDao =new CartDAOImpl();
+			return cartDao;
+		}
+		else 
+		{
+		return cartDao;
+		}
+	}
+	Cart orders[] = new Cart[10];
+	@Override
+	public String addCart(Cart cart) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateCartbyId(Cart cart, String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteCartbyId(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAllCart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cart getCartById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cart[] getCarts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

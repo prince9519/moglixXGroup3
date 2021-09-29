@@ -1,0 +1,43 @@
+package com.moglix.moglixproject.service;
+
+import com.moglix.mogproject.dto.Cart;
+
+public abstract class CartServiceImpl implements CartService {
+
+	@Override
+	public String addCart(Cart cart) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateCartbyId(Cart cart, String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteCartbyId(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAllCart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cart getCartById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cart[] getCarts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

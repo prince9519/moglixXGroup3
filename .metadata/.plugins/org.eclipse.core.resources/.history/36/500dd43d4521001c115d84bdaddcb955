@@ -1,0 +1,126 @@
+package com.moglix.moglixproject.repository;
+
+import com.moglix.mogproject.dto.Cart;
+import com.moglix.mogproject.dto.Order;
+
+public abstract class CartDAOImpl implements CartDAO {
+
+	private static int counter=0;
+	private static CartDAO cartDao;
+	public CartDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	public static CartDAO getinstance()
+	{
+		if (cartDao==null)
+		{
+			cartDao =new CartDAOImpl() {
+			};
+			return cartDao;
+		}
+		else 
+		{
+		return cartDao;
+		}
+	}
+	Cart carts[] = new Cart[10];
+	@Override
+	public String addCart(Cart cart) {
+		// TODO Auto-generated method stub
+		if(counter<carts.length)
+		{
+			carts[counter++]=cart;
+			return "cart added";
+		}
+		else
+		{
+			return "array full";
+		}
+
+	}
+
+	@Override
+	public String updateCartbyId(Cart cart, String id) {
+		// TODO Auto-generated method stub
+		for(Cart cart1 : carts)
+		{
+			if(cart1!=null && cart1.getOrderId().equalsIgnoreCase(id))
+			{
+				if(cart.getInvid()!=null)
+				{
+				cart1.setInvid(cart.getInvid());
+				}
+				if(cart.orderId!=null)
+				{
+				cart1.setOrderId(cart.getOrderId());
+				}
+				if(cart.getProductId()!=null)
+				{
+				cart1.setProductId(cart.getProductId());;
+				}
+				if(cart.getProductQty()!=null)
+				{
+				cart1.setProductQty(cart.getProductQty());
+				}
+				if(cart.getTotalPrice()!=null)
+				{
+				cart1.setTotalPrice(cart.getTotalPrice());;
+				}
+				if(cart.getUserId()!=null) 
+				{
+				cart1.setUserId(cart.getUserId());
+				}
+			}
+		}
+		return "Updated";
+
+	}
+
+	@Override
+	public String deleteCartbyId(String id) {
+		// TODO Auto-generated method stub
+		int i=0;
+		for(Cart cart2 : carts)
+		{
+			if(cart2!=null && cart2.getOrderId().equalsIgnoreCase(id))
+			{
+				cart2=null;
+				i=i+1;
+			}
+		}
+		if(i!=0)
+		{
+			return "data deleted";
+		}
+		else
+		{
+			return "data not found";
+		}
+	}
+
+	@Override
+	public String deleteAllCart() {
+		// TODO Auto-generated method stub
+		carts=null;
+		return "Deleted";
+	}
+
+	@Override
+	public Cart getCartById(String id) {
+		// TODO Auto-generated method stub
+		for (Cart cart3 : carts) {
+			if(cart3!=null && id.equals(cart3.getOrderId()))
+			{
+				return cart3;
+			}
+			}
+			return null;
+	}
+
+	@Override
+	public Cart[] getCarts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
