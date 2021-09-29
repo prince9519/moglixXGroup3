@@ -1,0 +1,48 @@
+package com.moglix.mogproject.dto;
+
+public class Cart {
+
+	public String orderId;    
+	public String userId;     
+	public String  invid;     
+	public String productId;  
+	public String productQty; 
+	public String totalPrice; 
+	public String getOrderId() 
+	{
+		return orderId;
+	}
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getInvid() {
+		return invid;
+	}
+	public void setInvid(String invid) {
+		this.invid = invid;
+	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+	public String getProductQty() {
+		return productQty;
+	}
+	public void setProductQty(String productQty) {
+		this.productQty = productQty;
+	}
+	public String getTotalPrice() {
+		return totalPrice;
+	}
+	public void setTotalPrice(String totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	}

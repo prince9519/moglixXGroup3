@@ -1,0 +1,5 @@
+package com.moglix.mogproject.dto;
+
+public class inventory {
+
+}

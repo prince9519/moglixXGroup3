@@ -1,0 +1,32 @@
+package com.moglix.moglixproject.service;
+
+import com.moglix.mogproject.dto.order;
+
+public abstract class orderServiceImpl implements orderSevice {
+
+	
+	@Override
+	public String addorder(order order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateOrderbyId(order order, String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteorderbyId(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAllorder() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

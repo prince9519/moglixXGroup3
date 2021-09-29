@@ -1,0 +1,103 @@
+package com.moglix.moglixproject.repository;
+
+import com.moglix.mogproject.dto.Order;
+
+public class OrderDAOImpl implements OrderDAO {
+
+	private static int counter=0;
+	private static OrderDAO orderDao;
+	public OrderDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	public static OrderDAO getinstance()
+	{
+		if (orderDao==null)
+		{
+			orderDao =new OrderDAOImpl();
+			return orderDao;
+		}
+		else 
+		{
+		return orderDao;
+		}
+	}
+	Order orders[] = new Order[10];
+	@Override
+	public String addorder(Order order) {
+		// TODO Auto-generated method stub
+		if(counter<orders.length)
+		{
+			orders[counter++]=order;
+			return "Order added";
+		}
+		else
+		{
+			return "array full";
+		}
+	}
+
+	@Override
+	public String updateOrderbyId(Order order, String id) {
+		// TODO Auto-generated method stub
+		for(Order order1 : orders)
+		{
+			if(order1!=null && order1.getOrderId().equalsIgnoreCase(id))
+			{
+				if(order.getInvid()!=null)
+				{
+				order1.setInvid(order.getInvid());
+				}
+				if(order.orderId!=null)
+				{
+				order1.setOrderId(order.getOrderId());
+				}
+				if(order.getProductId()!=null)
+				{
+				order1.setProductId(order.getProductId());;
+				}
+				if(order.getProductQty()!=null)
+				{
+				order1.setProductQty(order.getProductQty());
+				}
+				if(order.getTotalPrice()!=null)
+				{
+				order1.setTotalPrice(order.getTotalPrice());;
+				}
+				if(order.getUserId()!=null) 
+				{
+				order1.setUserId(order.getUserId());
+				}
+			}
+		}
+		return "Updated";
+	}
+
+	@Override
+	public String deleteorderbyId(String id) {
+		// TODO Auto-generated method stub
+		int i=0;
+		for(Order order2 : orders)
+		{
+			if(order2!=null && order2.getOrderId().equalsIgnoreCase(id))
+			{
+				order2=null;
+				i=i+1;
+			}
+		}
+		if(i!=0)
+		{
+			return "data deleted";
+		}
+		else
+		{
+			return "data not found";
+		}
+	}
+
+	@Override
+	public String deleteAllorder() {
+		// TODO Auto-generated method stub
+       return "";
+	}
+
+}

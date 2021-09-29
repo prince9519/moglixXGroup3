@@ -1,0 +1,47 @@
+package com.moglix.moglixproject.repository;
+
+import com.moglix.mogproject.dto.Order;
+
+public class OrderDAOImpl implements OrderDAO {
+
+	private static OrderDAO orderDao;
+	public OrderDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	public static OrderDAO getinstance()
+	{
+		if (orderDao==null)
+		{
+			orderDao =new OrderDAOImpl();
+			return orderDao;
+		}
+		else 
+		{
+		return orderDao;
+		}
+	}
+	@Override
+	public String addorder(Order order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updateOrderbyId(Order order, String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteorderbyId(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAllorder() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

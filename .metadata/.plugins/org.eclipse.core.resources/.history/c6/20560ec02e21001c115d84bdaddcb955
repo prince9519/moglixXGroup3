@@ -1,0 +1,6 @@
+package com.moglix.mogproject.dto;
+
+public class role {
+	public String roleId;
+	public String roleName;
+}
