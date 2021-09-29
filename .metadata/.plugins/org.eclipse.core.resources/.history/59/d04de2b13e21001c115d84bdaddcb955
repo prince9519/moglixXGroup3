@@ -103,21 +103,5 @@ public class OrderDAOImpl implements OrderDAO {
 		// TODO Auto-generated method stub
        return "";
 	}
-	@Override
-	public Order getOrderById(String id) {
-		// TODO Auto-generated method stub
-		for (Order order3 : orders) {
-			if(order3!=null && id.equals(order3.getOrderId()))
-			{
-				return order3;
-			}
-			}
-			return null;
-	}
-	@Override
-	public Order[] getorders() {
-		// TODO Auto-generated method stub
-		return orders;
-	}
 
 }

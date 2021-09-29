@@ -31,15 +31,5 @@ public abstract class OrderServiceImpl implements OrderSevice {
 		// TODO Auto-generated method stub
       return orderDAO.deleteAllorder();
 	}
-	@Override
-	public Order getOrderById(String id) {
-		// TODO Auto-generated method stub
-      return orderDAO.getOrderById(id);
-	}
-	@Override
-	public Order[] getorders(){
-		// TODO Auto-generated method stub
-      return orderDAO.getorders();
-	}
 
 }

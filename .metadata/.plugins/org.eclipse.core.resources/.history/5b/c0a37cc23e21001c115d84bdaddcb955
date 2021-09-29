@@ -117,7 +117,7 @@ public class OrderDAOImpl implements OrderDAO {
 	@Override
 	public Order[] getorders() {
 		// TODO Auto-generated method stub
-		return orders;
+		return null;
 	}
 
 }

@@ -8,4 +8,6 @@ public interface OrderSevice {
 	public String updateOrderbyId(Order order, String id);
 	public String deleteorderbyId(String id);
 	public String deleteAllorder();
+	public Order getOrderById(String id);
+	public Order[] getorders();
 }
