@@ -7,7 +7,6 @@ import com.moglix.mogproject.dto.Order;
 public abstract class OrderServiceImpl implements OrderSevice {
 
 	OrderDAO orderDAO = OrderDAOImpl.getinstance();
-	private static OrderSevice orderSevice;
 	@Override
 	public String addorder(Order order) {
 		// TODO Auto-generated method stub

@@ -101,7 +101,8 @@ public class OrderDAOImpl implements OrderDAO {
 	@Override
 	public String deleteAllorder() {
 		// TODO Auto-generated method stub
-       return "";
+		orders=null;
+       return "Deleted";
 	}
 	@Override
 	public Order getOrderById(String id) {
